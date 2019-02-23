@@ -1,17 +1,38 @@
 pragma solidity >=0.4.24;
 
+//Importing openzeppelin-solidity ERC-721 implemented Standard
 import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol";
 
+// StarNotary Contract declaration inheritance the ERC721 openzeppelin implementation
 contract StarNotary is ERC721 {
 
+    // Star data
     struct Star {
         string name;
     }
 
+
+    // Implement Task 1 Add a name and symbol properties
+    // name: Is a short name to your token
+    // symbol: Is a short string like 'USD' -> 'American Dollar'
+
+    // Token name
+    string internal name_;
+
+    // Token symbol
+    string internal symbol_;
+
+    constructor (string memory _name, string  memory _symbol) public{
+        name_ = _name;
+        symbol_ = _symbol;
+    }
+
+    // mapping the Star with the Owner Address
     mapping(uint256 => Star) public tokenIdToStarInfo;
+    // mapping the TokenId and price
     mapping(uint256 => uint256) public starsForSale;
 
-
+    
     // Create Star using the Struct
     function createStar(string memory _name, uint256 _tokenId) public { // Passing the name and tokenId as a parameters
         Star memory newStar = Star(_name); // Star is an struct so we are creating a new Star
@@ -21,7 +42,7 @@ contract StarNotary is ERC721 {
 
     // Putting an Star for sale (Adding the star tokenid into the mapping starsForSale, first verify that the sender is the owner)
     function putStarUpForSale(uint256 _tokenId, uint256 _price) public {
-        require(ownerOf(_tokenId) == msg.sender, "You can't sale the Star you don't owned");
+        require(ownerOf(_tokenId) == msg.sender, "You can't sell the Star that you don't own");
         starsForSale[_tokenId] = _price;
     }
 
@@ -44,9 +65,11 @@ contract StarNotary is ERC721 {
         }
     }
 
-       // Implement Task 1 lookUptokenIdToStarInfo
+    // Implement Task 1 lookUptokenIdToStarInfo
     function lookUptokenIdToStarInfo (uint _tokenId) public view returns (string memory) {
         //1. You should return the Star saved in tokenIdToStarInfo mapping
+        //require (tokenIdToStarInfo[_tokenId] !=  '', "No matching stars");
+        return tokenIdToStarInfo[_tokenId].name;
     }
 
     // Implement Task 1 Exchange Stars function
