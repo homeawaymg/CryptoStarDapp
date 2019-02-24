@@ -1,0 +1,109 @@
+PS F:\Nodeprojects\udacity\Ethereum\Final\CryptoStarDapp> truffle migrate --reset --network rinkeby
+⚠️  Important ⚠️
+If you're using an HDWalletProvider, it must be Web3 1.0 enabled or your migration will hang.
+
+
+Migrations dry-run (simulation)
+===============================
+> Network name:    'rinkeby-fork'
+> Network id:      4
+> Block gas limit: 6999643
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > account:             0xa8Dd7B8f24311bd14fcB9DC2fd7b5cB51b7e74F0
+   > balance:             37.979173045
+   > gas used:            269908
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00269908 ETH
+
+   -------------------------------------
+   > Total cost:          0.00269908 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'StarNotary'
+   ----------------------
+   > account:             0xa8Dd7B8f24311bd14fcB9DC2fd7b5cB51b7e74F0
+   > balance:             37.956152365
+   > gas used:            2302068
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02302068 ETH
+
+   -------------------------------------
+   > Total cost:          0.02302068 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.02571976 ETH
+
+⚠️  Important ⚠️
+If you're using an HDWalletProvider, it must be Web3 1.0 enabled or your migration will hang.
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 7000000
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0xa34be42351af399ef8a428b39ec486dd23a4032712fdf72983132372651e965e
+   > Blocks: 0            Seconds: 9
+   > contract address:    0xf0E2a2252d0F3eCb12cC54bDDB3e555F45ca0e62
+   > account:             0xa8Dd7B8f24311bd14fcB9DC2fd7b5cB51b7e74F0
+   > balance:             37.979023045
+   > gas used:            284908
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00284908 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00284908 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'StarNotary'
+   ----------------------
+   > transaction hash:    0xe1440aad04d5f121c719eef3d5c6a417b4e7aa32ba617ccbaeb146a7611807ea
+   > Blocks: 0            Seconds: 12
+   > contract address:    0x4194454464Abd3D90874A10F859b05D943017685
+   > account:             0xa8Dd7B8f24311bd14fcB9DC2fd7b5cB51b7e74F0
+   > balance:             37.955402365
+   > gas used:            2362068
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02362068 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.02362068 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.02646976 ETH
+
+Contract Creation LINK - https://rinkeby.etherscan.io/address/0x4194454464Abd3D90874A10F859b05D943017685
+First Star Creation Link - https://rinkeby.etherscan.io/tx/0x18d1c732c8837ccedb639a86378c5260e10d001284055302d5e0b9bcc3c18f72
+
+

@@ -1,0 +1,27 @@
+{
+  "name": "cryptostardapp",
+  "version": "1.0.0",
+  "description": "Distributed Application for Star Notary Service",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "openzeppelin-solidity": "^2.1.2",
+    "truffle-hdwallet-provider": "^1.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/homeawaymg/CryptoStarDapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/homeawaymg/CryptoStarDapp/issues"
+  },
+  "homepage": "https://github.com/homeawaymg/CryptoStarDapp#readme"
+}
